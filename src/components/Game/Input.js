@@ -17,6 +17,8 @@ function Input() {
         <input
           type="text"
           id="word-input"
+          pattern="[A-Za-z]{5}"
+          title="Must be five letters"
           value={guessWord}
           onChange={(event) => {
             setGuessWord(event.target.value);
