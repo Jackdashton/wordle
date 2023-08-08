@@ -1,7 +1,7 @@
 import React from "react";
 
-function Input() {
-  const [guessWord, setGuessWord] = React.useState("Enter Word");
+function Input( {guessWord, setGuessWord} ) {
+
 
   return (
     <>
@@ -26,7 +26,6 @@ function Input() {
         ></input>
         <button>Submit</button>
       </form>
-      <p>The word you guessed was: {guessWord}</p>
     </>
   );
 }
