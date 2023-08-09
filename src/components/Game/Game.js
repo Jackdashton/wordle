@@ -16,7 +16,6 @@ function Game() {
 
   function handleSubmitGuess(guessWord) {
     setGuesses([...guesses, guessWord ])
-    console.log(guesses);
   }
 
   return (
