@@ -18,11 +18,12 @@ function Input( {guessWord, setGuessWord, handleSubmitGuess} ) {
         <input
           type="text"
           id="word-input"
-          pattern="[A-Za-z]{5}"
+          pattern="[A-Z]{5}"
+          style={{ textTransform: 'uppercase'}}
           title="Must be five letters"
           value={guessWord}
           onChange={(event) => {
-            setGuessWord(event.target.value);
+            setGuessWord(event.target.value.toUpperCase());
           }}
         ></input>
         <button>Submit</button>
