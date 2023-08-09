@@ -1,6 +1,6 @@
 import React from "react";
 
-function Input( {guessWord, setGuessWord} ) {
+function Input( {guessWord, setGuessWord, handleSubmitGuess} ) {
 
 
   return (
@@ -11,6 +11,7 @@ function Input( {guessWord, setGuessWord} ) {
           event.preventDefault();
           console.log({guessWord})
           setGuessWord("");
+          handleSubmitGuess(guessWord);
         }}
       >
         <label htmlFor="word-input">Guess a Word:</label>
