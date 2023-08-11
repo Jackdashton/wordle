@@ -1,4 +1,5 @@
 import React from "react";
+import Guess from "./Guess.js";
 
 function GuessList({ guessWord, setGuessWord, guesses, guess }) {
   return (
@@ -7,7 +8,10 @@ function GuessList({ guessWord, setGuessWord, guesses, guess }) {
       {/* Potentially change to p tags later */}
       <ol>
         {guesses.map((item, index) => (
-          <li key={index}>{item}</li>
+          <>
+            <Guess />
+            <li key={index}>{item}</li>
+          </>
         ))}
       </ol>
     </>
