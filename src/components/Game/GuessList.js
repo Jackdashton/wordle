@@ -9,8 +9,7 @@ function GuessList({ guessWord, setGuessWord, guesses, guess }) {
       <ol>
         {guesses.map((item, index) => (
           <>
-            <Guess />
-            <li key={index}>{item}</li>
+            <Guess key={index} value={item} />
           </>
         ))}
       </ol>

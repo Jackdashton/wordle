@@ -3,13 +3,12 @@ import React from "react";
 function Guess({ value }) {
   return (
     <p className="guess">
-      <span className="cell">F</span>
-      <span className="cell">I</span>
-      <span className="cell">R</span>
-      <span className="cell">S</span>
-      <span className="cell">T</span>
+      {value.split('').map(letter => (
+        <span className="cell">
+          {letter}
+        </span>
+      ))}
     </p>
-  );
-}
+  )}
 
-export default Guess;
+  export default Guess;
