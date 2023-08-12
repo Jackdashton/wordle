@@ -19,8 +19,8 @@ function Game() {
 
   return (
     <>
-      <Input guessWord={guessWord} setGuessWord={setGuessWord} handleSubmitGuess={handleSubmitGuess}/>
       <GuessList guessWord={guessWord} setGuessWord={setGuessWord} guesses={guesses} />
+      <Input guessWord={guessWord} setGuessWord={setGuessWord} handleSubmitGuess={handleSubmitGuess}/>
     </>
   );
 }

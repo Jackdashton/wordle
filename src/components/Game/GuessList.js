@@ -1,15 +1,16 @@
 import React from "react";
 import Guess from "./Guess.js";
+import {NUM_OF_GUESSES_ALLOWED} from '../../constants.js'
+import {  range  } from "../../utils.js";
 
 function GuessList({ guessWord, setGuessWord, guesses, guess }) {
   return (
     <>
-      <h1>Previous Guesses</h1>
       {/* Potentially change to p tags later */}
       <ol>
-        {guesses.map((item, index) => (
+        {range(NUM_OF_GUESSES_ALLOWED).map((item, index) => (
           <>
-            <Guess key={index} value={item} />
+            <Guess key={item} value={guesses[item]} />
           </>
         ))}
       </ol>
