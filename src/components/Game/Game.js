@@ -9,13 +9,12 @@ import GameOverBanner from "../Game/GameOverBanner";
 // Pick a random word on every pageload.
 const answer = sample(WORDS);
 // To make debugging easier, we'll log the solution in the console.
-console.info({ answer });
+
 
 function Game() {
   const [guessWord, setGuessWord] = React.useState("");
   const [guesses, setGuesses] = React.useState([]);
   const [gameStatus, setGameStatus] = React.useState("running");
-  console.log(gameStatus);
 
   function handleSubmitGuess(guessWord) {
     const nextGuesses = [...guesses, guessWord ];
