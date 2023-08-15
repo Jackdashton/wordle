@@ -30,7 +30,6 @@ function Game() {
 
   return (
     <>
-      {gameStatus}
       <GuessList guessWord={guessWord} setGuessWord={setGuessWord} guesses={guesses} answer={answer} />
       <Input guessWord={guessWord} setGuessWord={setGuessWord} handleSubmitGuess={handleSubmitGuess} gameStatus={gameStatus}/>
       {gameStatus !== "running" && (
